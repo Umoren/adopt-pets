@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 import GenericLayout from 'layouts/GenericLayout/genericLayout';
 
 export default function ExplorePets() {
-    const url = 'http://127.0.0.1:3000/pets';
+    const url = `${process.env.REACT_APP_API_URL}/pets`;
+    console.log('url is here', url);
     const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
     const { data, error } = useSWR(url, fetcher);

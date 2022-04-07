@@ -20,7 +20,7 @@ import SoonModal from '../../shared/ComingSoonModal/soonModal';
 export default function PetDetails() {
     const [showModal, setShowModal] = useState(false);
     const { id } = useParams();
-    const url = `http://127.0.0.1:3000/pets/${id}`;
+    const url = `${process.env.REACT_APP_API_URL}/pets/${id}`;
     const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
     console.log('sdds', showModal);

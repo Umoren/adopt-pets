@@ -1,11 +1,17 @@
 import React from 'react';
+import GenericLayout from 'layouts/GenericLayout/genericLayout';
+
 import { Link } from 'react-router-dom';
 
-const NotFound = () => (
-    <div>
-        <h1>404 - Not Found!</h1>
-        <Link to="/">Go Home</Link>
-    </div>
-);
+export default function NotFound() {
+    return (
+        <GenericLayout>
+            <h1> Hey there is nothing here</h1>
 
-export default NotFound;
+            <a>
+                {' '}
+                <Link to="/">Go Home</Link>{' '}
+            </a>
+        </GenericLayout>
+    );
+}

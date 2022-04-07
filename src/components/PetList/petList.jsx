@@ -7,7 +7,7 @@ import useSWR from 'swr';
 import { Link } from 'react-router-dom';
 
 export default function PetList() {
-    const url = 'http://127.0.0.1:3000/pets';
+    const url = `${process.env.REACT_APP_API_URL}/pets`;
     const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
     const { data, error } = useSWR(url, fetcher);
