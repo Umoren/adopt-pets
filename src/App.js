@@ -5,11 +5,11 @@ import ResetStyles from './reset-styles';
 import GlobalStyle from './global-styles';
 
 export default function App() {
-  return (
-    <>
-      <Routing />
-      <ResetStyles />
-      <GlobalStyle />
-    </>
-  );
+    return (
+        <>
+            <Routing />
+            <ResetStyles />
+            <GlobalStyle />
+        </>
+    );
 }
